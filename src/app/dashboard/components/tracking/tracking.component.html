@@ -1,0 +1,63 @@
+<main class="!bg-[url('\src\assets\dashboard\bg.png')] !bg-cover	!bg-center ">
+    <header class="bg-card">
+        <div class="bg-card">
+            <div class="flex flex-col w-full max-w-screen-xl mx-auto px-6 sm:px-8">
+                <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
+                    <div class="flex flex-auto items-center min-w-0">
+                        <div class="flex flex-col min-w-0 ml-4">
+                            <div
+                                class="text-2xl md:text-4xl text-white font-semibold tracking-tight leading-7 md:leading-snug truncate ng-star-inserted">
+                                Welcome back, Oualid!</div>
+                            <div class="flex items-center text-slate-500"><mat-icon role="img"
+                                    class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                                    data-mat-icon-type="svg" data-mat-icon-name="bell"
+                                    data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" fit="" height="100%"
+                                        width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                        <path fill-rule="evenodd"
+                                            d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></mat-icon>
+                                <div class="ml-1.5 leading-6 truncate text-slate-500">You have 2 new messages and 15 new
+                                    tasks</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-3 md:grid-cols-6 grid-rows-5 gap-2 p-2">
+        <div class="col-start-1 row-start-1 col-end-4 row-end-3  bg-black rounded-md">
+            <form action="" class="p-5">
+                <h1 class="!text-2xl !font-bold text-white">Calculate your BMI</h1>
+                <mat-form-field class="w-full mt-2">
+                    <mat-label>Height (cm)</mat-label>
+                    <input matInput [formControl]="height" required />
+                    <mat-icon matSuffix>height</mat-icon>
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                    <mat-label>weight (cm)</mat-label>
+                    <input matInput [formControl]="weight" />
+                    <mat-icon matSuffix>line_weight</mat-icon>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="calculate()">
+                    Calculate
+                </button>
+                <div *ngIf="bmi" class="text-white mt-4">
+                    <p>Your BMI is : {{ bmi.toFixed(2) }}</p>
+                </div>
+            </form>
+        </div>
+        <div class="md:col-start-1 md:row-start-3 md:col-end-4 row-end-5 row-span-1 bg-green-500"></div>
+        <div class="md:col-start-1 md:row-start-5 md:col-end-6 row-end-6 row-span-5 bg-red-500"></div>
+        <div class="md:col-start-4 md:row-start-1 md:col-end-6 row-end-5 row-span-1 bg-yellow-500"></div>
+    </div>
+
+
+
+</main>
+<footer>
+
+</footer>
