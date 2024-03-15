@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MealsComponent } from './meals/meals.component';
+import { MealsComponent } from './components/meals/meals.component';
 
 const routes: Routes = [
   {

@@ -60,5 +60,5 @@ export class DashboardComponent {
   logout(){  
       this.authService.signOut().then(() => {});
     
-  }
+  } 
 }
