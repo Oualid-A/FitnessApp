@@ -22,7 +22,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipsModule} from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
 import { TrainingService } from './training.service';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { ScheduleModule, View } from '@syncfusion/ej2-angular-schedule';
+import { WeekService, MonthService} from '@syncfusion/ej2-angular-schedule';
 const routes: Routes = [
   {
     path: '',

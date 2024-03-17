@@ -28,6 +28,7 @@ export class DashboardComponent {
   private readonly authService: AuthService = inject(AuthService);
   private readonly router: Router = inject(Router);
 
+  
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.adjustSidebar();

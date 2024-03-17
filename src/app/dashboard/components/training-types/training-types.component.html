@@ -1,40 +1,37 @@
-<div class="">
+<div class="bg-[#f1f5f9] h-autto">
     <div class="p-4">
-
+        <h1 class="font-bold ">What body part do you want to exercise?</h1>
         <mat-chip-listbox [formControl]="chipListControl" (click)="sendRequest()">
-            <mat-chip-option selected value="Back">Back</mat-chip-option>
-            <mat-chip-option value="Cardio">Cardio</mat-chip-option>
-            <mat-chip-option value="chest">chest</mat-chip-option>
-            <mat-chip-option value="lower arms">lower arms</mat-chip-option>
-            <mat-chip-option value="lower legs">lower legs</mat-chip-option>
-            <mat-chip-option value="neck">neck</mat-chip-option>
-            <mat-chip-option value="shoulders">shoulders</mat-chip-option>
-            <mat-chip-option value="upper legs">upper legs</mat-chip-option>
+            <mat-chip-option value="back">Back</mat-chip-option>
+            <mat-chip-option value="cardio">Cardio</mat-chip-option>
+            <mat-chip-option value="chest">Chest</mat-chip-option>
+            <mat-chip-option value="lower arms">Lower arms</mat-chip-option>
+            <mat-chip-option value="lower legs" selected="">Lower legs</mat-chip-option>
+            <mat-chip-option value="neck">Neck</mat-chip-option>
+            <mat-chip-option value="shoulders">Shoulders</mat-chip-option>
+            <mat-chip-option value="upper legs">Upper legs</mat-chip-option>
         </mat-chip-listbox>
-
-        <p>
-            Selected value: {{selectedValue}} 
-        </p>
     </div>
-    <div class="card-container grid grid-cols-2 bg-white md:grid-cols-4 gap-4">
-        <div class="" *ngFor="let exercise of responseData">
-          <img [src]="exercise.gifUrl" class="card-img-top" alt="Exercise Gif">
-          <div class="card-body">
-            <h5 class="card-title">{{ exercise.name }}</h5>
-            <p class="card-text">Body Part: {{ exercise.bodyPart }}</p>
-            <p class="card-text">Equipment: {{ exercise.equipment }}</p>
-            <p class="card-text">Target: {{ exercise.target }}</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Secondary Muscles: {{ exercise.secondaryMuscles.join(', ') }}</li>
-              <li class="list-group-item">Instructions:</li>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item" *ngFor="let instruction of exercise.instructions">{{ instruction }}</li>
-              </ul>
-            </ul>
-          </div>
+    <div class="card-container grid grid-cols-2  md:grid-cols-4 gap-4 p-4  ">
+        <div class="bg-card p-4 shadow rounded-2xl overflow-hidden bg-[#fff] " *ngFor="let exercise of responseData">
+            <img [src]="exercise.gifUrl" class="card-img-top" alt="Exercise Gif">
+            <div class="card-body">
+                <h2 class="font-semibold">{{ exercise.name }}</h2>
+                <p class="card-text"><strong>Body Part: </strong> {{ exercise.bodyPart }}</p>
+                <p class="card-text"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
+                <p class="card-text"><strong>Target:</strong> {{ exercise.target }}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Secondary Muscles:</strong> {{ exercise.secondaryMuscles.join(', ') }}</li>
+                    <li class="mt-2"><strong>Instructions:</strong></li>
+                    <ul class="list-group list-group-flush text-justify">
+                        <li class="list-group-item" *ngFor="let instruction of exercise.instructions">{{ instruction }}
+                        </li>
+                    </ul>
+                </ul>
+            </div>
         </div>
-      </div>
-      
+    </div>
+
 
 
 </div>

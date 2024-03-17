@@ -14,7 +14,7 @@ export class TrainingTypesComponent {
 
   chipListControl = new FormControl();
 
-  selectedValue: string = 'Back';
+  selectedValue: string = 'lower legs';
   private readonly http = inject(HttpClient);
   private readonly trainingService = inject(TrainingService);
 

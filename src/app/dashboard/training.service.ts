@@ -24,4 +24,10 @@ export class TrainingService {
 
   }
 
+  getPrograms(): Observable<any> {
+    return this.http.get<any>('http://localhost:3000/programs');
+  }
+
+
+
 }
