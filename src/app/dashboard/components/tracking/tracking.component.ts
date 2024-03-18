@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { ELEMENT_DATA, FoodItem } from './tracking.modell';
+import { FoodItem } from './tracking.modell';
 import {
   ApexAxisChartSeries,
   ApexChart,

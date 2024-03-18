@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Exercise } from './components/training-types/exercise.model';
+import { Exercise } from './exercise.model';
 
 @Injectable()
 export class TrainingService {

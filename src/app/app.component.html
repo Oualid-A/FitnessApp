@@ -1,1 +1,50 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container class="h-screen !bg-white !text-black" (backdropClick)="close('backdrop')">
+    <mat-sidenav #sidenav [opened]="isSidebarOpen" (keydown.escape)="isSidebarOpen = false" disableClose
+      [mode]="isSidebarOpen ? 'side' : 'over'" class="w-[16rem] !bg-black">
+      <nav class="grid grid-cols-1 gap-4 ps-4 px-3 items-center">
+        <div class=" flex justify-between items-center mt-4">
+          <img src="../../assets/dashboard/logo.png" alt="logo" srcset="" class="w-12">
+          <span>
+            <mat-icon>notifications</mat-icon>
+          </span>
+        </div>
+        <div class="flex justify-center ">
+          <img src="../../assets/dashboard/mgaddar.svg" alt="" srcset="" class="mt-8 mb-8">
+        </div>
+        <div class=" flex justify-around flex-col space-y-8">
+          <a  class="flex justify-start items-center text-lg font-medium gap-4" routerLinkActive="active bg-[#ef7180] p-2 rounded-md"
+            [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/tracking"><mat-icon
+              class="!text-white">dashboard</mat-icon>Principal</a>
+          <a  class="flex justify-start items-center text-lg font-medium gap-4"  routerLinkActive="active bg-[#ef7180] p-2 rounded-md"
+            [routerLink]="['/training-types']"><mat-icon class="!text-white">fitness_center</mat-icon> Training
+            types</a>
+          <a  class="flex justify-start items-center text-lg font-medium gap-4"  routerLinkActive="active bg-[#ef7180] p-2 rounded-md"
+            [routerLink]="['/calendar']"> <mat-icon class="!text-white">calendar_today</mat-icon>Workout Program</a>
+          <a  class="flex justify-start items-center text-lg font-medium gap-4"  routerLinkActive="active bg-[#ef7180] p-2 rounded-md"
+            [routerLink]="['/meals']"> <mat-icon class="!text-white">fastfood</mat-icon>My
+            Meals</a>
+          <a  class="flex justify-start items-center text-lg font-medium gap-4"  routerLinkActive="active bg-[#ef7180] p-2 rounded-md"
+            [routerLink]="['/profile']"> <mat-icon class="!text-white">supervised_user_circle</mat-icon>My
+            Profile</a>
+        </div>
+      </nav>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <header>
+        <mat-toolbar class="!bg-black">
+          <button mat-icon-button class="example-icon " (click)="sidenav.open() "
+            aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span class="flex-1 ">
+          </span>
+          <button mat-icon-button class="example-icon" (click)="logout()"
+            aria-label="Example icon-button with share icon">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </mat-toolbar>
+      </header>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

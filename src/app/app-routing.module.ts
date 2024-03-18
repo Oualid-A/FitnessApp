@@ -18,6 +18,22 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./calendar/calendar.module').then((m) => m.CalendarModule)
+  },
+  {
+    path: 'meals',
+    loadChildren: () => import('./meals/meals.module').then((m) => m.MealsModule)
+  },
+  {
+    path: 'training-types',
+    loadChildren: () => import('./training-types/training-types.module').then((m) => m.TrainingTypesModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then((m) => m.ProfileModule)
   }
 ];
 
