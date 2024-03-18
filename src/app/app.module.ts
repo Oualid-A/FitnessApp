@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TrackingService } from './dashboard/components/tracking/tracking.service';
 
 @NgModule({
   declarations: [AppComponent],

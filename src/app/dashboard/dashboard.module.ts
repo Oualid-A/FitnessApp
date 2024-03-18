@@ -22,6 +22,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
 import { TrainingService } from './training.service';
+import { TrackingService } from './components/tracking/tracking.service';
 
 const routes: Routes = [
   {
@@ -89,6 +90,6 @@ const routes: Routes = [
     ReactiveFormsModule
   ],
   exports: [RouterModule],
-  providers: [TrainingService],
+  providers: [TrainingService, TrackingService],
 })
 export class DashboardModule {}

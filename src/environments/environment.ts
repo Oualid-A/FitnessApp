@@ -20,7 +20,8 @@ export const environment = {
       'X-RapidAPI-Host': 'work-out-api1.p.rapidapi.com',
     },
   },
-  apiUrl : 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/',
-  rapidApiKey : '13b06c0735msh2ba1a20add837d9p1973aajsndf142e9196b2',
-  
+  apiUrl: 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/',
+  rapidApiKey: '13b06c0735msh2ba1a20add837d9p1973aajsndf142e9196b2',
+  nutritionApiUrl: 'https://api.api-ninjas.com/v1/nutrition',
+  nutritionApiKey: 'w0WpgMFO4pxRZRqhmGUMyQ==nmPncB34l47kTpLt',
 };

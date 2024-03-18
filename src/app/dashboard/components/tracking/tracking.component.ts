@@ -11,6 +11,7 @@ import {
   ApexTooltip,
   ApexStroke,
 } from 'ng-apexcharts';
+import { TrackingService } from './tracking.service';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -26,20 +27,26 @@ export type ChartOptions = {
   templateUrl: './tracking.component.html',
 })
 export class TrackingComponent {
-
+  constructor(private trackingService: TrackingService) {}
+  nutritionData = [];
   height = new FormControl('', Validators.required);
   weight = new FormControl('', Validators.required);
   classification: string;
   bmi: number = 0;
   stepsCount: number = 9870;
-  distanceCovered: number = 8.5; 
+  distanceCovered: number = 8.5;
   caloriesBurned: number = 530;
   workoutsCompleted: number = 5;
   displayedColumns: string[] = ['name', 'protein', 'calories', 'fat'];
-  dataSource = new MatTableDataSource<FoodItem>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource<FoodItem>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  ngOnInit() {
+    this.trackingService.getData().subscribe((response) => {
+      this.dataSource = new MatTableDataSource<FoodItem>(response);
+    });
+  }
   calculate() {
     const heightMeters = this.height.value;
     const weightKg = this.weight.value;
