@@ -120,8 +120,17 @@
           <div
             class="flex items-baseline justify-center w-full mt-5 text-secondary"
           >
-            <div class="text-md font-medium truncate">averge :</div>
-            <div class="ml-1.5 text-lg font-semibold">100</div>
+            <igx-input-group>
+              <input
+                style="color: black;"
+                igxInput
+                name="stepsCount"
+                type="text"
+                [value]="stepsCount"
+                [(ngModel)]="stepsCount"
+              />
+              <label igxLabel for="stepsCount"></label>
+            </igx-input-group>
           </div>
         </div>
       </div>
@@ -147,8 +156,17 @@
           <div
             class="flex items-baseline justify-center w-full mt-5 text-secondary"
           >
-            <div class="text-md font-medium truncate">averge :</div>
-            <div class="ml-1.5 text-lg font-semibold">100</div>
+          <igx-input-group>
+            <input
+              style="color: black;"
+              igxInput
+              name="distanceCovered"
+              type="text"
+              [value]="distanceCovered"
+              [(ngModel)]="distanceCovered"
+            />
+            <label igxLabel for="distanceCovered"></label>
+          </igx-input-group>
           </div>
         </div>
       </div>
@@ -181,8 +199,17 @@
           <div
             class="flex items-baseline justify-center w-full mt-5 text-secondary"
           >
-            <div class="text-md font-medium truncate">averge :</div>
-            <div class="ml-1.5 text-lg font-semibold">100</div>
+          <igx-input-group>
+            <input
+              style="color: black;"
+              igxInput
+              name="caloriesBurned"
+              type="text"
+              [value]="caloriesBurned"
+              [(ngModel)]="caloriesBurned"
+            />
+            <label igxLabel for="caloriesBurned"></label>
+          </igx-input-group>
           </div>
         </div>
       </div>
@@ -208,8 +235,17 @@
           <div
             class="flex items-baseline justify-center w-full mt-5 text-secondary"
           >
-            <div class="text-md font-medium truncate">averge :</div>
-            <div class="ml-1.5 text-lg font-semibold">200</div>
+          <igx-input-group>
+            <input
+              style="color: black;"
+              igxInput
+              name="workoutsCompleted"
+              type="text"
+              [value]="workoutsCompleted"
+              [(ngModel)]="workoutsCompleted"
+            />
+            <label igxLabel for="workoutsCompleted"></label>
+          </igx-input-group>
           </div>
         </div>
       </div>

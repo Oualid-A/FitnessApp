@@ -23,6 +23,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
 import { TrainingService } from './training.service';
 import { TrackingService } from './components/tracking/tracking.service';
+import { IgxInputGroupModule } from 'igniteui-angular';
+
 
 const routes: Routes = [
   {
@@ -87,7 +89,8 @@ const routes: Routes = [
     HttpClientModule,
     MatChipsModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IgxInputGroupModule
   ],
   exports: [RouterModule],
   providers: [TrainingService, TrackingService],
