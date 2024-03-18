@@ -1,12 +1,15 @@
-<main class="!bg-[url('\src\assets\dashboard\bg.png')] !bg-cover	!bg-center ">
+<main class=" text-black !bg-[#f1f5f9] h-auto ">
     <header class="bg-card">
         <div class="bg-card">
             <div class="flex flex-col w-full max-w-screen-xl mx-auto px-6 sm:px-8">
                 <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
                     <div class="flex flex-auto items-center min-w-0">
+                        <div>
+                            <img src="../../../../assets/dashboard/joe.jpg" class="rounded-full" alt="" srcset="">
+                        </div>
                         <div class="flex flex-col min-w-0 ml-4">
                             <div
-                                class="text-2xl md:text-4xl text-white font-semibold tracking-tight leading-7 md:leading-snug truncate ng-star-inserted">
+                                class="text-2xl md:text-4xl text-black font-semibold tracking-tight leading-7 md:leading-snug truncate ng-star-inserted">
                                 Welcome back, Oualid!</div>
                             <div class="flex items-center text-slate-500"><mat-icon role="img"
                                     class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
@@ -23,40 +26,188 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mt-8 sm:mt-0 hidden md:block">
+                        <button mat-flat-button="" mat-ripple-loader-class-name="mat-mdc-button-ripple" 
+                            class="mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base  bg-[#ef7180] rounded-3xl"><span
+                                class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><mat-icon role="img"
+                                class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                                data-mat-icon-type="svg" data-mat-icon-name="cog-8-tooth"
+                                data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" fit="" height="100%"
+                                    width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path fill-rule="evenodd"
+                                        d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                        clip-rule="evenodd"></path>
+                                </svg></mat-icon><span class="mdc-button__label"><span
+                                    class="ml-2">Settings</span></span><span
+                                class="mat-mdc-focus-indicator"></span><span
+                                class="mat-mdc-button-touch-target"></span><span
+                                class="mat-ripple mat-mdc-button-ripple"></span></button>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+    <div class="flex flex-col gap-4 p-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full min-w-0">
+            <!-- Totale -->
+            <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden bg-[#000] text-white">
+                <div class="flex items-start justify-between ">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">
+                        Steps Count
+                    </div>
+                    <div class="ml-2 -mt-2 -mr-3">
 
-    <div class="grid grid-cols-3 md:grid-cols-6 grid-rows-5 gap-2 p-2">
-        <div class="col-start-1 row-start-1 col-end-4 row-end-3  bg-black rounded-md">
-            <form action="" class="p-5">
-                <h1 class="!text-2xl !font-bold text-white">Calculate your BMI</h1>
-                <mat-form-field class="w-full mt-2">
-                    <mat-label>Height (cm)</mat-label>
-                    <input matInput [formControl]="height" required />
-                    <mat-icon matSuffix>height</mat-icon>
-                </mat-form-field>
-                <mat-form-field class="w-full">
-                    <mat-label>weight (cm)</mat-label>
-                    <input matInput [formControl]="weight" />
-                    <mat-icon matSuffix>line_weight</mat-icon>
-                </mat-form-field>
-                <button mat-raised-button color="primary" (click)="calculate()">
-                    Calculate
-                </button>
-                <div *ngIf="bmi" class="text-white mt-4">
-                    <p>Your BMI is : {{ bmi.toFixed(2) }}</p>
+                    </div>
                 </div>
-            </form>
+                <div class="flex flex-col items-center mt-2">
+                    <div class="text-7xl sm:text-6xl font-bold tracking-tight leading-none text-blue-500">
+                        {{ stepsCount }}
+                    </div>
+                    <div class="text-lg font-medium text-blue-600 dark:text-blue-500">
+                        step
+                    </div>
+                    <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
+                        <div class="text-md font-medium truncate">averge :</div>
+                        <div class="ml-1.5 text-lg font-semibold">100</div>
+                    </div>
+                </div>
+            </div>
+            <!--Distance Covered -->
+            <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden bg-[#000] text-white">
+                <div class="flex items-start justify-between">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Distance Covered</div>
+                    <div class="ml-2 -mt-2 -mr-3">
+
+                    </div>
+                </div>
+                <div class="flex flex-col items-center mt-2">
+                    <div class="text-7xl sm:text-6xl font-bold tracking-tight leading-none text-red-500">
+                        {{ distanceCovered }} </div>
+                    <div class="text-lg font-medium text-red-600 dark:text-red-500">Kilometers</div>
+                    <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
+                        <div class="text-md font-medium truncate">averge :</div>
+                        <div class="ml-1.5 text-lg font-semibold">100</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Issues -->
+            <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden bg-[#000] text-white">
+                <div class="flex items-start justify-between">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Calories Burned
+                    </div>
+                    <div class="ml-2 -mt-2 -mr-3">
+                        <button mat-icon-button>
+                            <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center mt-2">
+                    <div class="text-7xl sm:text-6xl font-bold tracking-tight leading-none text-amber-500">
+                        {{ caloriesBurned }}
+                    </div>
+                    <div class="text-lg font-medium text-amber-600 dark:text-amber-500">Calories</div>
+                    <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
+                        <div class="text-md font-medium truncate">averge :
+                        </div>
+                        <div class="ml-1.5 text-lg font-semibold">100</div>
+                    </div>
+                </div>
+            </div>
+            <!-- delivred -->
+            <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden bg-[#000] text-white">
+                <div class="flex items-start justify-between">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Workouts Completed</div>
+                    <div class="ml-2 -mt-2 -mr-3">
+
+
+                    </div>
+                </div>
+                <div class="flex flex-col items-center mt-2">
+                    <div class="text-7xl sm:text-6xl font-bold tracking-tight leading-none text-green-500">
+                        {{ workoutsCompleted }}</div>
+                    <div class="text-lg font-medium text-green-600 dark:text-green-500">Workouts</div>
+                    <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
+                        <div class="text-md font-medium truncate">averge :</div>
+                        <div class="ml-1.5 text-lg font-semibold">200</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="md:col-start-1 md:row-start-3 md:col-end-4 row-end-5 row-span-1 bg-green-500"></div>
-        <div class="md:col-start-1 md:row-start-5 md:col-end-6 row-end-6 row-span-5 bg-red-500"></div>
-        <div class="md:col-start-4 md:row-start-1 md:col-end-6 row-end-5 row-span-1 bg-yellow-500"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- BMI -->
+            <mat-card class="!bg-[#000000] text rounded-2xl">
+                <mat-card-content>
+                    <form action="" class="p-5">
+                        <h1 class="!text-2xl !font-bold text-white">Calculate your BMI</h1>
+                        <mat-form-field class="w-full mt-2">
+                            <mat-label>Height (cm)</mat-label>
+                            <input matInput [formControl]="height" required />
+                            <mat-icon matSuffix>height</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field class="w-full">
+                            <mat-label>Weight (kg)</mat-label>
+                            <input matInput [formControl]="weight" />
+                            <mat-icon matSuffix>line_weight</mat-icon>
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" class="bg-[#ef7180]" (click)="calculate()">
+                            Calculate
+                        </button>
+                        <div *ngIf="bmi" class="text-white mt-4">
+                            <span>Your <strong>BMI</strong> is: <strong>{{ bmi.toFixed(2) }}</strong>, this consider 
+                                <strong>{{ classification }}</strong> </span>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+
+            <!-- Food Values -->
+            <div class="mat-elevation-z8 rounded-2xl p-2 bg-black">
+                <table mat-table [dataSource]="dataSource" class="bg-[#000] overflow-x-auto">
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Protein Column -->
+                    <ng-container matColumnDef="protein">
+                        <th mat-header-cell *matHeaderCellDef> Protein (g) </th>
+                        <td mat-cell *matCellDef="let element"> {{element.protein}} </td>
+                    </ng-container>
+
+                    <!-- Calories Column -->
+                    <ng-container matColumnDef="calories">
+                        <th mat-header-cell *matHeaderCellDef> Calories </th>
+                        <td mat-cell *matCellDef="let element"> {{element.calories}} </td>
+                    </ng-container>
+
+                    <!-- Fat Column -->
+                    <ng-container matColumnDef="fat">
+                        <th mat-header-cell *matHeaderCellDef> Fat (g) </th>
+                        <td mat-cell *matCellDef="let element"> {{element.fat}} </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="bg-black"
+                    aria-label="Select page of food items">
+                </mat-paginator>
+            </div>
+        </div>
+
+        <mat-card class="!bg-[#000000] text rounded-2xl">
+            <mat-card-content>
+                <app-fitness-chart></app-fitness-chart>
+            </mat-card-content>
+        </mat-card>
+
+
+
     </div>
-
-
-
 </main>
 <footer>
 
