@@ -15,33 +15,20 @@ export class TrainingTypesComponent {
   chipListControl = new FormControl();
 
   selectedValue: string = 'lower legs';
-  private readonly http = inject(HttpClient);
-  private readonly trainingService = inject(TrainingService);
+
+  readonly #_trainingService = inject(TrainingService);
 
   ngOnInit() {
     this.chipListControl.valueChanges.subscribe((value) => {
       this.selectedValue = value;
     });
-
-    this.trainingService.getTrainingData(this.selectedValue).subscribe(
-      (response: any) => {
-        this.responseData = response;
-        console.log(response);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.sendRequest()
   }
 
   sendRequest(): void {
-    this.trainingService.getTrainingData(this.selectedValue).subscribe(
+    this.#_trainingService.getTrainingData(this.selectedValue).subscribe(
       (response: Exercise[]) => {
         this.responseData = response;
-        console.log(this.responseData);
-      },
-      (error) => {
-        console.error(error);
       }
     );
   }

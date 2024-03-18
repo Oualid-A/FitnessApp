@@ -4,14 +4,13 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ELEMENT_DATA, FoodItem } from './tracking.modell';
 import {
-  ChartComponent,
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
   ApexDataLabels,
   ApexTooltip,
-  ApexStroke
-} from "ng-apexcharts";
+  ApexStroke,
+} from 'ng-apexcharts';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -27,23 +26,16 @@ export type ChartOptions = {
   templateUrl: './tracking.component.html',
 })
 export class TrackingComponent {
-onToggleChangeDate(arg0: string) {
-throw new Error('Method not implemented.');
-}
+
   height = new FormControl('', Validators.required);
   weight = new FormControl('', Validators.required);
   classification: string;
   bmi: number = 0;
   stepsCount: number = 9870;
-  distanceCovered: number = 8.5; // en kilomètres
+  distanceCovered: number = 8.5; 
   caloriesBurned: number = 530;
   workoutsCompleted: number = 5;
-  displayedColumns: string[] = [
-    'name',
-    'protein',
-    'calories',
-    'fat',
-  ];
+  displayedColumns: string[] = ['name', 'protein', 'calories', 'fat'];
   dataSource = new MatTableDataSource<FoodItem>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -74,6 +66,4 @@ throw new Error('Method not implemented.');
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-
-  
 }

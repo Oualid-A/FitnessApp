@@ -4,9 +4,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {NgIf} from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
-import {  Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from 'src/auth/auth.service';
@@ -25,9 +23,7 @@ export class DashboardComponent {
   isSidebarOpen = false;
   isClicked = true;
 
-  private readonly authService: AuthService = inject(AuthService);
-  private readonly router: Router = inject(Router);
-
+  readonly #_authService: AuthService = inject(AuthService);
   
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -59,7 +55,8 @@ export class DashboardComponent {
   }
 
   logout(){  
-      this.authService.signOut().then(() => {});
-    
+      this.#_authService.signOut().then(() => {
+        window.alert('Logged out!');
+      });;
   } 
 }

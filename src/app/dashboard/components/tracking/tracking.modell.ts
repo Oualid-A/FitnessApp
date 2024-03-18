@@ -1,11 +1,11 @@
 export interface FoodItem {
     position: number;
     name: string;
-    protein: number; // in grams
+    protein: number; 
     calories: number;
-    fat: number; // in grams
-    carbohydrates: number; // in grams
-    fiber: number; // in grams
+    fat: number; 
+    carbohydrates: number; 
+    fiber: number; 
   }
   
   export const ELEMENT_DATA: FoodItem[] = [

@@ -1,7 +1,6 @@
 <mat-sidenav-container class="h-screen !bg-white !text-black" (backdropClick)="close('backdrop')">
   <mat-sidenav #sidenav [opened]="isSidebarOpen" (keydown.escape)="isSidebarOpen = false" disableClose
     [mode]="isSidebarOpen ? 'side' : 'over'" class="w-[16rem] !bg-black">
-    <!-- <p><button mat-button (click)="isSidebarOpen = false"><mat-icon class="!text-white">close</mat-icon></button></p> -->
     <nav class="grid grid-cols-1 gap-4 ps-4 px-3 items-center">
       <div class=" flex justify-between items-center mt-4">
         <img src="../../assets/dashboard/logo.png" alt="logo" srcset="" class="w-12">
@@ -10,7 +9,6 @@
         </span>
       </div>
       <div class="flex justify-center ">
-        <!-- <img src="../../assets/dashboard/joe.jpg" alt="" srcset="" class="rounded-full"> -->
         <img src="../../assets/dashboard/mgaddar.svg" alt="" srcset="" class="mt-8 mb-8">
       </div>
       <div class=" flex justify-around flex-col space-y-8">
