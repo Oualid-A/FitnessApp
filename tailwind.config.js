@@ -4,5 +4,14 @@ module.exports = {
   theme: {
     extend: {},
   },
+  important: true,
   plugins: [],
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.{html,ts}'],
+    options: {
+      safelist: [],
+      important: true,
+    },
+  }
 };
