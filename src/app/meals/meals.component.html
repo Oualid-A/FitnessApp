@@ -1,0 +1,57 @@
+<main class="card-container">
+  <!-- Breakfast Cards -->
+  <section>
+    <h2 class="breakfast-title">Breakfast</h2>
+    <div class="card-container" *ngIf="meals">
+      <div class="card" *ngFor="let item of meals.breakfast">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="card-content">
+          <div class="meal-title">{{ item.title }}</div>
+          <div class="meal-description">{{ item.description }}</div>
+          <div class="meal-ingredients">
+            Ingredients: {{ item.ingredients.join(", ") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 class="lunch-title">Lunch</h2>
+    <div class="card-container" *ngIf="meals">
+      <div class="card" *ngFor="let item of meals.lunch">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="card-content">
+          <div class="meal-title">{{ item.title }}</div>
+          <div class="meal-description">{{ item.description }}</div>
+          <div class="meal-ingredients">
+            Ingredients: {{ item.ingredients.join(", ") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 class="dinner-title">Dinner</h2>
+    <div class="card-container" *ngIf="meals">
+      <div class="card" *ngFor="let item of meals.dinner">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="card-content">
+          <div class="meal-title">{{ item.title }}</div>
+          <div class="meal-description">{{ item.description }}</div>
+          <div class="meal-ingredients">
+            Ingredients: {{ item.ingredients.join(", ") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
