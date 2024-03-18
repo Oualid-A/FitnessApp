@@ -57,6 +57,8 @@ main {
   
   .card-content {
     padding: 20px;
+    height: calc(100% - 200px); /* Calculate remaining height for content */
+    overflow-y: auto; /* Add vertical scrollbar */
   }
   
   .meal-title {

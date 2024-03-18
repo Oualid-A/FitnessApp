@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { meals } from './meals';
 
 @Component({
   selector: 'mg-meals',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls:['./meals.component.css']
 })
 export class MealsComponent {
-
+  meals: any;
+  ngOnInit(): void {
+    this.meals = meals;
+  }
 }

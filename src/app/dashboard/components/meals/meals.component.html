@@ -2,180 +2,54 @@
   <!-- Breakfast Cards -->
   <section>
     <h2 class="breakfast-title">Breakfast</h2>
-    <div class="card">
-      <div
-        class="card-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1295633127/photo/grilled-chicken-meat-and-fresh-vegetable-salad-of-tomato-avocado-lettuce-and-spinach-healthy.jpg?s=1024x1024&w=is&k=20&c=2HQ3drj21kzwpvGYh-YjAmPVShsv7vbnOPNEJ-lg_pQ=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Avocado Toast</div>
-        <div class="meal-description">
-          Whole grain toast topped with mashed avocado, sliced tomatoes, and a
-          sprinkle of salt and pepper.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Whole grain bread, avocado, tomato, salt, pepper.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div
-        class="card-image breakfast-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1401761762/photo/grilled-salmon-fish-fillet-and-fresh-vegetable-salad-with-tomato-red-onion-and-lettuce.jpg?s=2048x2048&w=is&k=20&c=TUxBVI-I88mZfKL8M-XGX9cg_dGM2aoHESNrtQ_dM_I=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Greek Yogurt with Berries</div>
-        <div class="meal-description">
-          Creamy Greek yogurt topped with fresh mixed berries and a drizzle of
-          honey.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Greek yogurt, mixed berries, honey.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div
-        class="card-image breakfast-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1369934349/photo/mediterranean-steak-bowl.jpg?s=2048x2048&w=is&k=20&c=bdU5Y4bxnPGPGNiyu1Ts4BpSUuXthXhHykocI24IrY4=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Oatmeal with Almonds and Banana</div>
-        <div class="meal-description">
-          Warm oatmeal topped with sliced bananas, chopped almonds, and a dash
-          of cinnamon.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Oats, banana, almonds, cinnamon.
+    <div class="card-container" *ngIf="meals">
+      <div class="card" *ngFor="let item of meals.breakfast">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="card-content">
+          <div class="meal-title">{{ item.title }}</div>
+          <div class="meal-description">{{ item.description }}</div>
+          <div class="meal-ingredients">
+            Ingredients: {{ item.ingredients.join(", ") }}
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Lunch Cards -->
   <section>
     <h2 class="lunch-title">Lunch</h2>
-    <div class="card">
-      <div
-        class="card-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1364237142/photo/tuna-and-fresh-vegetable-salad-of-tomato-cucumber-olives-onion-lettuce-and-boiled-egg-top-view.jpg?s=2048x2048&w=is&k=20&c=-NIH4JFVIpMRzUtrRvmkK_05qwLclH9yCA43gYJJXTM=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Quinoa Salad with Chickpeas</div>
-        <div class="meal-description">
-          A hearty salad made with cooked quinoa, chickpeas, diced cucumbers,
-          cherry tomatoes, and a lemon vinaigrette dressing.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Quinoa, chickpeas, cucumber, tomatoes, lemon, olive oil,
-          salt, pepper.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div
-        class="card-image lunch-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1566034209/photo/delicious-and-healthy-green-salad-of-different-leaves-and-vegetables-with-seeds-and-olive-oil.jpg?s=2048x2048&w=is&k=20&c=3uiL8ACiChO0HN-xvWVHDDbBEoHfvJ-FK5_z7v6e6vw=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Grilled Chicken Wrap</div>
-        <div class="meal-description">
-          Grilled chicken breast wrapped in a whole wheat tortilla with lettuce,
-          tomato, and avocado.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Chicken breast, whole wheat tortilla, lettuce, tomato,
-          avocado.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div
-        class="card-image lunch-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1320546154/photo/salmon-fish-salad-fresh-vegetable-greek-salad-with-tomato-pepper-lettuce-olives-cucumbers.jpg?s=1024x1024&w=is&k=20&c=rvaCCczT__94uhxmhOZj-1oV9on3GR8rYxRJsJLjUn4=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Mediterranean Pasta Salad</div>
-        <div class="meal-description">
-          A colorful pasta salad with cherry tomatoes, cucumber, olives, feta
-          cheese, and a lemon-herb dressing.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Pasta, cherry tomatoes, cucumber, olives, feta cheese,
-          lemon, herbs.
+    <div class="card-container" *ngIf="meals">
+      <div class="card" *ngFor="let item of meals.lunch">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="card-content">
+          <div class="meal-title">{{ item.title }}</div>
+          <div class="meal-description">{{ item.description }}</div>
+          <div class="meal-ingredients">
+            Ingredients: {{ item.ingredients.join(", ") }}
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Dinner Cards -->
   <section>
     <h2 class="dinner-title">Dinner</h2>
-    <div class="card">
-      <div
-        class="card-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1463540222/photo/grilled-chicken-salad-with-mango-salsa-tomato-cilantro-red-onion-and-lettuce-in-mexican-style.jpg?s=2048x2048&w=is&k=20&c=Yfn0c_YlzlGbmXf-nXVwyHsBojOV-j6S9mR1jsXDjxc=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Baked Salmon with Roasted Vegetables</div>
-        <div class="meal-description">
-          Oven-baked salmon fillet served with a side of roasted vegetables such
-          as broccoli, carrots, and sweet potatoes.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Salmon fillet, broccoli, carrots, sweet potatoes, olive
-          oil, salt, pepper.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div
-        class="card-image dinner-image"
-        style="
-          background-image: url('https://media.istockphoto.com/id/1125529257/photo/raw-vegetable-salad-with-chickpeas.jpg?s=2048x2048&w=is&k=20&c=vDDfxs-rCnkke0JooHlSHK3AJa0rB-tqysw98FXKyJ8=');
-        "
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">
-          Grilled Chicken with Quinoa and Steamed Broccoli
-        </div>
-        <div class="meal-description">
-          Grilled chicken breast served with fluffy quinoa and lightly steamed
-          broccoli florets.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Chicken breast, quinoa, broccoli, olive oil, salt,
-          pepper.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div
-        class="card-image"
-        style="background-image: url('https://media.istockphoto.com/id/959478110/photo/fish-fillet-with-raw-vegetables.jpg?s=2048x2048&w=is&k=20&c=tKpDEfAIaI4JzNOGL-QprdlikUYUKbW9-x-q8Glcmv0=')"
-      ></div>
-      <div class="card-content">
-        <div class="meal-title">Vegetable Stir-Fry with Tofu</div>
-        <div class="meal-description">
-          A flavorful stir-fry made with mixed vegetables and tofu, served with
-          brown rice.
-        </div>
-        <div class="meal-ingredients">
-          Ingredients: Mixed vegetables, tofu, soy sauce, brown rice.
+    <div class="card-container" *ngIf="meals">
+      <div class="card" *ngFor="let item of meals.dinner">
+        <div
+          class="card-image"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="card-content">
+          <div class="meal-title">{{ item.title }}</div>
+          <div class="meal-description">{{ item.description }}</div>
+          <div class="meal-ingredients">
+            Ingredients: {{ item.ingredients.join(", ") }}
+          </div>
         </div>
       </div>
     </div>
