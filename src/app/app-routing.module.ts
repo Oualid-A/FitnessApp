@@ -17,24 +17,36 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'calendar',
-    loadChildren: () => import('./calendar/calendar.module').then((m) => m.CalendarModule)
+    loadChildren: () =>
+    import('./calendar/calendar.module').then((m) => m.CalendarModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'meals',
-    loadChildren: () => import('./meals/meals.module').then((m) => m.MealsModule)
+    loadChildren: () =>
+    import('./meals/meals.module').then((m) => m.MealsModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'training-types',
-    loadChildren: () => import('./training-types/training-types.module').then((m) => m.TrainingTypesModule)
-  },
-  {
-    path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then((m) => m.ProfileModule)
-  }
+    loadChildren: () =>
+    import('./training-types/training-types.module').then(
+      (m) => m.TrainingTypesModule
+      ),
+      canActivate: [AuthGuard],
+    },
+    {
+      path: 'profile',
+      loadChildren: () =>
+      import('./profile/profile.module').then((m) => m.ProfileModule),
+      canActivate: [AuthGuard],
+    },
 ];
 
 @NgModule({
