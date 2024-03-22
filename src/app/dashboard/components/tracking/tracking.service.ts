@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TrackingService {
   private query = '1lb brisket and fries';
@@ -16,7 +16,7 @@ export class TrackingService {
 
   getData(): Observable<any> {
     const headers = new HttpHeaders({
-      'X-Api-Key': this.apiKey
+      'X-Api-Key': this.apiKey,
     });
     return this.http.get<any>(this.apiUrl, { headers });
   }
