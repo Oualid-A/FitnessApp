@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { MatChip } from '@angular/material/chips';
 import { FormControl } from '@angular/forms';
 import { TrainingService } from './training.service';
 import { Exercise } from './exercise.model';

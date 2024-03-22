@@ -24,29 +24,29 @@ const routes: Routes = [
   {
     path: 'calendar',
     loadChildren: () =>
-    import('./calendar/calendar.module').then((m) => m.CalendarModule),
+      import('./calendar/calendar.module').then((m) => m.CalendarModule),
     canActivate: [AuthGuard],
   },
   {
     path: 'meals',
     loadChildren: () =>
-    import('./meals/meals.module').then((m) => m.MealsModule),
+      import('./meals/meals.module').then((m) => m.MealsModule),
     canActivate: [AuthGuard],
   },
   {
     path: 'training-types',
     loadChildren: () =>
-    import('./training-types/training-types.module').then(
-      (m) => m.TrainingTypesModule
+      import('./training-types/training-types.module').then(
+        (m) => m.TrainingTypesModule
       ),
-      canActivate: [AuthGuard],
-    },
-    {
-      path: 'profile',
-      loadChildren: () =>
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
       import('./profile/profile.module').then((m) => m.ProfileModule),
-      canActivate: [AuthGuard],
-    },
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

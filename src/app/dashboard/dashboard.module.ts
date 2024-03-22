@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { TrackingComponent } from './components/tracking/tracking.component';
 import { MatIconModule } from '@angular/material/icon';
